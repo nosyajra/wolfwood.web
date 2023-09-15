@@ -1,0 +1,25 @@
+@import '../abstracts/variables/colors';
+@import '../abstracts/variables/mixins';
+
+#contact-form {
+    input, textarea, select {
+        display: block;
+        width: 100%;
+        margin-bottom:15px;
+        padding:10px 15px;
+        font-weight:300;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    button {
+        text-transform: uppercase;
+        font-weight: 600;
+        background: $color__secondary-accent;
+        border:0;
+        color:#fff;
+        padding:15px;
+    }
+}

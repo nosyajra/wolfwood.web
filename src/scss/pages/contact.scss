@@ -1,0 +1,43 @@
+@import '../abstracts/variables/colors';
+@import '../abstracts/variables/mixins';
+
+#contact {
+    a {
+        color:#000;
+        text-decoration: none;
+
+        &:hover {
+            color: $color__secondary-accent;
+        }
+    }
+
+    ul {
+        margin:0;
+        padding:0;
+
+        li {
+            display:inline-block;
+            margin:0 10px 0 0;
+            padding:0;
+
+            a {
+                font-size:1.667em;
+            }
+        }
+    }
+}
+
+#contact-form {
+    form {
+        input, textarea {
+            width:100%;
+            display:block;
+            padding:10px 15px;
+            margin-bottom:10px;
+        }
+
+        textarea {
+            min-height: 240px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 15px;
+    gap: 15px;
+}
+
+@for $i from 1 through 12 {
+    .col-lg-#{$i}{
+        grid-column: span $i;
+    }
+}
+
+@media screen and (max-width:991px){
+    @for $i from 1 through 12 {
+        .col-md-#{$i}{
+            grid-column: span $i;
+        }
+    }
+} 
+
+@media screen and (max-width:640px){
+    @for $i from 1 through 12 {
+        .col-xs-#{$i}{
+            grid-column: span $i;
+        }
+    }
+} 

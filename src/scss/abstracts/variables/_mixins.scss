@@ -1,0 +1,29 @@
+@mixin font-gradient {
+    font-family:'Hind', sans-serif;
+    letter-spacing: 5px;
+    background: $color__bg-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin animateAll {
+    transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;  
+}
+
+@mixin gradientOverlay {
+    background: rgb(62,0,128);
+    background: -moz-linear-gradient(left, rgba(62,0,128,0.5) 0%, rgba(164,105,216,0.5) 100%);
+    background: -webkit-linear-gradient(left, rgba(62,0,128,0.5) 0%,rgba(164,105,216,0.5) 100%);
+    background: linear-gradient(to right, rgba(62,0,128,0.5) 0%,rgba(164,105,216,0.5) 100%);
+}
+
+@mixin titleBG {
+    background: #3e0080;
+    background: -moz-linear-gradient(-45deg, #3e0080 0%, #a469d8 100%);
+    background: -webkit-linear-gradient(-45deg, #3e0080 0%,#a469d8 100%);
+    background: linear-gradient(135deg, #3e0080 0%,#a469d8 100%);
+}

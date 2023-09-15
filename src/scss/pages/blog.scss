@@ -1,0 +1,23 @@
+@import '../abstracts/variables/colors';
+@import '../abstracts/variables/mixins';
+
+#blog {
+    padding:100px 15px;
+
+    .blog-list {
+        margin-top:60px;
+
+        .fimg {
+            margin-bottom:30px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+  
+}

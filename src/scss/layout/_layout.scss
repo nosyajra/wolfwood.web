@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.container{
+    width:100%;
+    max-width: 1920px;
+    margin:0 auto;
+    padding:0 15px;
+}
+
+li {
+    font-weight:300;
+    line-height: 1.5em;
+    margin-bottom:15px;
+}
+
+.inner-page {
+    padding: 80px 0;
+    min-height: 50vh;
+    background:url('../../../public/images/bg2.webp') no-repeat center top / contain  #f2f2f2;
+
+    h1 {
+        margin-bottom:60px;
+    }
+}
+
+@import 'grid';

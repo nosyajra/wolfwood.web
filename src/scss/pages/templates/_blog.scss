@@ -1,0 +1,50 @@
+@import '../../abstracts/variables/colors';
+@import '../../abstracts/variables/mixins';
+
+#blog-post {
+    .breadcrumb {
+        p {
+            margin:30px 0;
+            line-height: 100%;
+            
+            span {
+                display: inline-block;
+                margin:0 15px;
+            }
+
+            a {
+                color:#000;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color__main-accent;
+                }
+            }
+        }
+    }
+
+    .image {
+        height:480px;
+        width:100%;
+        margin:30px 0;
+        overflow:hidden;
+
+        img {
+            object-fit: cover;
+            width:100%;
+        }
+    }  
+}
+
+@media screen and (max-width:767px) {
+    #blog-post {
+        .image {
+            height:auto;
+            overflow:visible;
+    
+            img {
+                object-fit: contain;
+            }
+        }    
+    }
+}

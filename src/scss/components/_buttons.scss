@@ -1,0 +1,43 @@
+@import '../abstracts/variables/mixins';
+@import '../abstracts/variables/colors';
+
+.btn, 
+a.btn {
+    color:#fff;
+    background: $color__secondary-accent;
+    padding:0 28px;
+    text-align:center;
+    height:48px;
+    line-height: 48px;
+    font-size:1em;
+    letter-spacing:1px;
+    display: inline-block;
+    text-decoration:none;
+    border:1px solid $color__main-accent;
+    border-radius:4px;
+    @include animateAll;
+
+    &:hover {
+        background: $color__main-accent;
+        cursor:pointer;
+        @include animateAll;
+    }
+
+    i {
+        display: inline-block;
+        margin-left:30px;
+    }
+
+    &.btn-outline {
+        color: $color__main-accent;
+        background: $color__main-accent-0;
+        border:1px solid $color__main-accent;
+
+        &:hover {
+            background: $color__main-accent;
+            color:#fff;
+            @include animateAll;   
+        }
+    }
+}
+

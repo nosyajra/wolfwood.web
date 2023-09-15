@@ -1,0 +1,43 @@
+@import '../abstracts/variables/colors';
+@import '../abstracts/variables/mixins';
+
+#latest {
+    padding:100px 0;
+    background:url('../../../public/images/blog.webp') no-repeat center top / contain;
+    border-top:1px solid rgba(223, 223, 223,1);
+    
+    h2 {
+        margin-bottom:100px;
+    }
+
+    h4 {
+        margin-bottom:30px;
+    }
+
+    .blog-list {
+        margin-bottom:50px;
+    }
+
+    .blog-text {
+        padding:0 15px;
+    }
+
+    img {
+        max-width:100%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    #latest{
+        h3 {
+            margin:15px 0 10px 0;
+        }
+
+        .blog-list { 
+            img {
+                float:none;
+                max-width:100%;
+            }
+        }    
+    }
+}

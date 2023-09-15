@@ -1,0 +1,21 @@
+@import '../abstracts/variables/colors';
+@import '../abstracts/variables/mixins';
+
+#team {
+    .member {
+        text-align:center;
+        margin:30px 0;
+
+        .photo {
+            background: #D9D9D9;
+            padding:15px 0;
+            margin-bottom:30px;
+
+            img {
+                width:100%;
+                max-width: 360px;
+                height: auto;
+            }
+        }    
+    }
+}

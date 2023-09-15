@@ -1,0 +1,61 @@
+@import '../abstracts/variables/colors';
+@import '../abstracts/variables/mixins';
+
+#testimonials {
+    padding:60px 0 0;
+
+    h2 {
+        margin-bottom:60px;
+    }
+    
+    .testimonial {
+        text-align:left;
+        padding:15px;
+        
+        background:url("../../../public/images/quote.svg") no-repeat left top / contain #fff;  
+        border:1px solid #dfdfdf;
+        position: relative;
+        font-style: italic;
+        border-radius:5px;
+
+        p {
+            margin:0;
+        }
+
+        &:after {
+            display:block;
+            content:"";
+            width:30px;
+            height: 30px;
+            background: #fff;
+            position: absolute;
+            bottom:-16px;
+            left:23px;
+            transform: rotate(45deg);
+            border-bottom:1px solid #ccc;
+            border-right:1px solid #ccc;
+            border-radius:5px;
+        }
+    }
+
+    .col {
+        img {
+            float:left;
+            margin:30px 15px 15px 0;
+            max-width: 75px;
+            height: auto;
+            border-radius:50%;
+        }
+
+        h5 {
+            margin-top:40px;
+        }
+
+        h6 {
+            font-size:1em;
+            font-weight:400;
+            margin:5px 0;
+        }
+
+    } 
+}
