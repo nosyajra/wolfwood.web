@@ -5,7 +5,7 @@ import axios from "axios";
 import '../../scss/pages/templates/_sidebar.scss';
 
 
-const Contact = () => {
+const Sidebar = () => {
 
   const [posts, setPosts] = useState([])
 
@@ -28,8 +28,8 @@ const Contact = () => {
     <>
       <aside id="sidebar">
         <h3>Latest Posts</h3>
-        {posts.map((post) => (
-            <div className="row">
+        {posts.map((post, index) => (
+            <div className="row" key={post.title.rendered}>
                 <div className="col-lg-4 col-md-4 col-xs-12">
                     <img src={post.fimg_url} alt={post.title.rendered} />
                 </div>
@@ -43,4 +43,4 @@ const Contact = () => {
   );
 };
   
-export default Contact;
+export default Sidebar;

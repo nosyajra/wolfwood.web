@@ -30,11 +30,11 @@ const Latest = () => {
                 <h2 class="h1">Latest Posts</h2>
 
                 <div className="row">
-                    {posts.map((post) => (
-                        <div className="blog-list col-lg-6 col-md-12 col-xs-12" >
+                    {posts.map((post, index) => (
+                        <div className="blog-list col-lg-6 col-md-12 col-xs-12" key={"post_" + index} >
                             <div className="row">
                                 <div className="col-lg-4 col-md-4 col-xs-12">
-                                    <img src={post.fimg_url} alt={post.title.rendered} />
+                                    <img src={post.fimg_url} alt={post.title.rendered} width="300" height="200" />
                                 </div>
                                 <div className="blog-text col-lg-8 col-md-8 col-xs-12">
                                     <h4>{post.title.rendered}</h4>

@@ -16,7 +16,7 @@ const Header = () => {
     	  <div className="container">
           <div className="row">
             <div className="col-lg-4">
-              <Link to="/"><img src={window.location.origin + "/images/logo-black.webp"} className="logo" alt="Wolfwood Web" /></Link>
+              <Link to="/"><img src={window.location.origin + "/images/logo-black.webp"} className="logo" alt="Wolfwood Web" width="48" height="40" /></Link>
             </div>
             <div className="col-lg-8">
               <button className="toggle-nav" onClick={toggleNav} >

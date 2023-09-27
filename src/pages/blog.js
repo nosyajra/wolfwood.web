@@ -28,8 +28,8 @@ const Contact = () => {
         <div className="container">
             <h1>Blog</h1>
             <div className="row">
-                {posts.map((post) => (
-                  <div className="blog-list col-lg-4 col-md-6 col-xs-12" >
+                {posts.map((post, index) => (
+                  <div className="blog-list col-lg-4 col-md-6 col-xs-12" key={"post_" + index}>
                     <div className="fimg">
                       <img src={post.fimg_url} alt={post.title.rendered} />
                     </div>

@@ -32,7 +32,7 @@ const Featured = () => {
                     {projects.filter(project => project.acf.feat === '1').map((project) => (
                         <li>
                             <a href={project.acf.link.url} target="_rel">
-                                <img src={project.fimg_url} alt="" />
+                                <img src={project.fimg_url} alt={project.title.rendered} width="442" height="442" />
                                 <span className="description">{project.title.rendered}</span>
                             </a>
                         </li>

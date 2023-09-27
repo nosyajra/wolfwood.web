@@ -59,7 +59,7 @@ const ServiceBlocks = () => {
         <div className="service-details">
           <div className="container"> 
             {pages.filter(page => page.parent === 46).map((service, index) => (
-              <div id={"servI_" + index} className={index===0?"info visible":"info"} >
+              <div id={"servI_" + index} key={"servTab_" + index} className={index===0?"info visible":"info"} >
                 <div className="row">
 
                   <div className="col-lg-7 col-md-12 col-xs-12">
@@ -69,9 +69,9 @@ const ServiceBlocks = () => {
                     <Link to={"services/" + service.slug} className="btn">Learn More <i className="fas fa-chevron-right"></i></Link>
 
                     <div className="row">
-                      {service.acf.subservices.map((info) => (
-                        <div className="subservice-details col-lg-4 col-md-4 col-xs-12">
-                          <div className="image"><img src={info.subservice_image} alt="" /></div>
+                      {service.acf.subservices.map((info, index) => (
+                        <div className="subservice-details col-lg-4 col-md-4 col-xs-12" key={"servInfo_" + index}>
+                          <div className="image"><img src={info.subservice_image} alt={info.subservice_name} width="355" height="237" /></div>
                           <h5>{info.subservice_name}</h5>
                           <p>{info.subservice_description}</p>
                         </div>

@@ -30,7 +30,7 @@ const Post = () => {
     <>
         <div id="post" className="inner-page">
             <div className="container">
-                {post.map((content) => ( 
+                {post.map((content, index) => ( 
                     <div className="row">
                         <div className="col-lg-8 col-md-12 col-xs-12">
                             <main id="blog-post" class="container">
@@ -49,7 +49,7 @@ const Post = () => {
                                     <img src={content.fimg_url } alt={content.title.rendered} />
                                 </div>
                                 
-                                <article dangerouslySetInnerHTML={{__html: (content.content.rendered).replace(/class=/g, 'className=') }}></article>
+                                <article dangerouslySetInnerHTML={{__html: (content.content.rendered) }}></article>
                             </main>
                         </div>
 

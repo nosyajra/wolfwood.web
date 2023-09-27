@@ -12,15 +12,15 @@ const Footer = () => {
           <div className="row">
             
             <div className="col-lg-2 col-md-6 col-xs-12">
-              <Link to="/"><img src={window.location.origin + "/images/logo-black-large.webp"} alt="Wolfwood Web" /></Link>
+              <Link to="/"><img src={window.location.origin + "/images/logo-black-large.webp"} alt="Wolfwood Web" width="200" height="163" /></Link>
             </div>
 
             <div className="contact col-lg-3 col-md-6 col-xs-12">
               <h3>Have <span>Any Questions?</span><br />Contact Us</h3>
               <p><small>E-mail Address</small><br />contact@wolfwoodweb.com</p>
               <ul className="social">
-                <li><a href="#https://www.facebook.com/wolfwood.web" target="_blank"><i className="fab fa-linkedin"></i></a></li>
-                <li><a href="https://www.facebook.com/wolfwood.web" target="_blank"><i className="fab fa-facebook"></i></a></li>
+                <li><a href="#https://www.facebook.com/wolfwood.web" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a></li>
+                <li><a href="https://www.facebook.com/wolfwood.web" target="_blank" rel="noreferrer"><i className="fab fa-facebook"></i></a></li>
               </ul>
             </div>
 

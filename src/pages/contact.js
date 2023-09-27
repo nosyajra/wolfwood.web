@@ -43,8 +43,8 @@ const Contact = () => {
 
           <div className="row">
             <div className="col-lg-6 col-md-6 col-xs-12">
-              {page.map((content) => (
-                <article dangerouslySetInnerHTML={{__html: content.content.rendered}}></article>
+              {page.map((content, index) => (
+                <article dangerouslySetInnerHTML={{__html: content.content.rendered}} key={index}></article>
               ))} 
             </div>
 

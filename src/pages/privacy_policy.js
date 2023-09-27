@@ -24,12 +24,16 @@ const Contact = () => {
     <>
       <main id="portfolio" className="inner-page">
         <div className="container">
-          {page.map((content) => (
-            <>
-              <h1>Privacy Policy</h1>
-              <article dangerouslySetInnerHTML={{__html: content.content.rendered}}></article>
-            </>
-          ))}  
+          <div className="row">
+            <div className="col-lg-8 col-md-12">
+              {page.map((content) => (
+                <>
+                  <h1>Privacy Policy</h1>
+                  <article dangerouslySetInnerHTML={{__html: content.content.rendered}}></article>
+                </>
+              ))}
+            </div>
+          </div> 
         </div>
       </main>
     </>
