@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Helmet} from "react-helmet";
 import axios from "axios";
 
 import '../scss/pages/blog.scss';
@@ -24,6 +25,11 @@ const Contact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Blog - Wolfwood Web</title>
+        <meta name="description" content="" />
+      </Helmet> 
+
       <main id="blog" className="inner-page">
         <div className="container">
             <h1>Blog</h1>

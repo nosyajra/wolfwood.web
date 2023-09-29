@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Helmet} from "react-helmet";
 import axios from "axios";
 
 import '../scss/pages/portfolio.scss';
@@ -24,6 +25,11 @@ const Contact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Portfolio - Wolfwood Web</title>
+        <meta name="description" content="" />
+      </Helmet> 
+
       <main id="portfolio" className="inner-page">
         <div className="container">
             <h1>Portfolio</h1>

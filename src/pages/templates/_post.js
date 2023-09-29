@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 import Sidebar from '../../components/blog/sidebar';
 import axios from "axios";
 
@@ -28,6 +29,14 @@ const Post = () => {
 
     return (  
     <>
+
+        {post.map(({yoast_head_json}) => (
+            <Helmet>
+              <title>{yoast_head_json.title}</title>
+              <meta name="description" content={yoast_head_json.description} />
+            </Helmet>
+        ))} 
+
         <div id="post" className="inner-page">
             <div className="container">
                 {post.map((content, index) => ( 

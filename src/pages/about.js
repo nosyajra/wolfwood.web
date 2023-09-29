@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Helmet} from "react-helmet";
 import axios from "axios";
 import Team from "../components/team";
 import Testimonials from "../components/testimonials";
@@ -26,6 +27,14 @@ const Contact = () => {
 
   return (
     <>
+
+      {page.map(({yoast_head_json}) => (
+        <Helmet>
+          <title>{yoast_head_json.title}</title>
+          <meta name="description" content={yoast_head_json.description} />
+        </Helmet>
+      ))} 
+
       <main id="main" className="inner-page">
         <div className="container">
             {page.map((content) => (

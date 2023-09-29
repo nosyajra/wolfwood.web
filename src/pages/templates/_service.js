@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 import axios from "axios";
 
 import '../../scss/pages/services.scss';
@@ -26,33 +27,41 @@ const Service = () => {
     }, [])
 
     return (
+    <>    
+        {service.map(({yoast_head_json}) => (
+            <Helmet>
+              <title>{yoast_head_json.title}</title>
+              <meta name="description" content={yoast_head_json.description} />
+            </Helmet>
+        ))} 
         
-    <div id="service" className="inner-page">
-        <div className="container">
-            {service.map((content) => ( 
-                <>
-                    <main>
-                        <h1>{content.title.rendered}</h1>
-                        <div dangerouslySetInnerHTML={{__html: (content.content.rendered) }} />
-                    </main>
+        <div id="service" className="inner-page">
+            <div className="container">
+                {service.map((content) => ( 
+                    <>
+                        <main>
+                            <h1>{content.title.rendered}</h1>
+                            <div dangerouslySetInnerHTML={{__html: (content.content.rendered) }} />
+                        </main>
 
-                    <section id="subservices">
-                        <div className="row">
-                        {content.acf.subservices.map((info) => (
-                            <div className="subservice-details col-lg-3 col-md-6 col-xs-12">
-                                <div className="image"><img src={info.subservice_image} alt="" /></div>
-                                <div className="text">
-                                    <h4>{info.subservice_name}</h4>
-                                    <p>{info.subservice_description}</p>
+                        <section id="subservices">
+                            <div className="row">
+                            {content.acf.subservices.map((info) => (
+                                <div className="subservice-details col-lg-3 col-md-6 col-xs-12">
+                                    <div className="image"><img src={info.subservice_image} alt="" /></div>
+                                    <div className="text">
+                                        <h4>{info.subservice_name}</h4>
+                                        <p>{info.subservice_description}</p>
+                                    </div>
                                 </div>
+                            ))}
                             </div>
-                        ))}
-                        </div>
-                    </section>
-                </>    
-            ))}
-        </div>    
-    </div>
+                        </section>
+                    </>    
+                ))}
+            </div>    
+        </div>
+        </>    
   );
 };
   

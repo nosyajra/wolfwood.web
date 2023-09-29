@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
+import {Helmet} from "react-helmet";
 import axios from "axios";
 import Hero from '../components/hero';
 import Services from '../components/service-blocks';
@@ -14,7 +15,7 @@ const Contact = () => {
   const fetchPage = () => {
       // Using axios to fetch the page
       axios
-        .get(global.config.WP_API_URI + "pages?slug=frontpage&acf_format=standard&_embed")
+        .get(global.config.WP_API_URI + "pages?slug=home&acf_format=standard&_embed")
         .then((res) => {
           // Saving the data to state
           setPage(res.data);
@@ -28,6 +29,15 @@ const Contact = () => {
 
   return (
     <>
+      
+      {page.map(({yoast_head_json}) => (
+        <Helmet>
+          <title>{yoast_head_json.title}</title>
+          <meta name="description" content={yoast_head_json.description} />
+        </Helmet>
+      ))} 
+      
+
       {page.map(({acf: hero}) => (
         <Hero title={hero.hero_title} description={hero.hero_description}  BGimage={hero.hero_image}  />
       ))}  

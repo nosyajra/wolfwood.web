@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {Link} from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 import '../scss/pages/services.scss';
 
@@ -37,6 +38,13 @@ const Services = () => {
 
   return (
     <>
+      {page.map(({yoast_head_json}) => (
+        <Helmet>
+          <title>{yoast_head_json.title}</title>
+          <meta name="description" content={yoast_head_json.description} />
+        </Helmet>
+      ))} 
+
       <div className="inner-page">
         <main id="services" >
           <div className="container">
@@ -58,7 +66,7 @@ const Services = () => {
                   <h4>{service.title.rendered}</h4>
                   <p>{service.acf.subservice_description}</p>
                   <article dangerouslySetInnerHTML={{__html: service.acf.service_excerpt}} ></article>
-                  <Link to={"services/" + service.slug}>Learn More <i className="fas fa-chevron-right"></i></Link>
+                  <Link to={service.slug}>Learn More <i className="fas fa-chevron-right"></i></Link>
                 </div>
               ))}
             </div>  
